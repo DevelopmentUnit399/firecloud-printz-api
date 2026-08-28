@@ -46,6 +46,26 @@ fastify.get('/api/products/:id', async (request, reply) => {
   return product;
 });
 
+// GET: Single product by Name (e.g. /api/products/search?title=ripple)
+fastify.get('api/products/search', async (request, reply) => {
+  const { title } = request.query
+
+  if (!title) {
+    return reply.status(400).send({ error: 'Please provide a ?title= query parameter'})
+  }
+
+    // Find matches (case-insensitive partial match)
+  const matches = products.filter((p) =>
+      p.title.toLowerCase().includes(title.toLowerCase())
+  )
+
+  if (matches.length === 0) {
+    return reply.status(404).send({ error: 'No products found matching that title'})
+  }
+
+  return matches
+})
+
 // Start the server
 const start = async () => {
   try {
