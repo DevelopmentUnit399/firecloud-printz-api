@@ -47,7 +47,7 @@ fastify.get('/api/products/:id', async (request, reply) => {
 });
 
 // GET: Single product by Name (e.g. /api/products/search?title=ripple)
-fastify.get('api/products/search', async (request, reply) => {
+fastify.get('/api/products/search', async (request, reply) => {
   const { title } = request.query
 
   if (!title) {
