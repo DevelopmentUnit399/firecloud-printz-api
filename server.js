@@ -20,7 +20,11 @@ const products = [
     originalPrice: 15,
     salePrice: null,
     categories: ["Valentine's Day"],
-    variants: ["Heart Color" ["Red", "Light Blue", "Orange", "Pink"], "Inside Color" ["Red", "Light Blue", "Orange", "Pink"], "Outside Color" ["Red", "Light Blue", "Orange", "Pink"]],
+    variants: [
+      { name: "Heart Color", options: ["Red", "Light Blue", "Orange", "Pink"] },
+      { name: "Inside Color", options: ["Red", "Light Blue", "Orange", "Pink"] },
+      { name: "Outside Color", options: ["Red", "Light Blue", "Orange", "Pink"] }
+    ],
   },
   {
     id: 2,
@@ -31,7 +35,10 @@ const products = [
     originalPrice: 10,
     salePrice: null,
     categories: ["Art & Decorative"],
-    variants: ["Lid Color" ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"], "Box Color" ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"]],
+    variants: [
+      { name: "Lid Color", options: ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"] },
+      { name: "Box Color", options: ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"] }
+    ],
   },
   {
     id: 3,
@@ -42,7 +49,10 @@ const products = [
     originalPrice: 60,
     salePrice: null,
     categories: ["Tools & Functional"],
-    variants: ["Clock Base Color" ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"], "LED Type" ["White LED", "RGB LED"]],
+    variants: [
+      { name: "Clock Base Color", options: ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"] },
+      { name: "LED Type", options: ["White LED", "RGB LED"] }
+    ],
   },
   {
     id: 4,
@@ -53,7 +63,9 @@ const products = [
     originalPrice: 8,
     salePrice: null,
     categories: ["Valentine's Day"],
-    variants: ["Color" ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"]],
+    variants: [
+      { name: "Color", options: ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"] }
+    ],
   },
   {
     id: 5,
@@ -64,7 +76,10 @@ const products = [
     originalPrice: 14,
     salePrice: null,
     categories: ["Valentine's Day"],
-    variants: ["Size" ["Small", "Large"], "Color" ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"]],
+    variants: [
+      { name: "Size", options: ["Small", "Large"] },
+      { name: "Color", options: ["Black", "Brown", "Gray", "Green", "Light Blue", "Orange", "Pink", "Red", "White", "Yellow"] }
+    ],
   }
 ];
 
